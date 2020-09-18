@@ -6,7 +6,6 @@ public class Window {
 		try (Scanner sc = new Scanner(System.in)) {
 			int height = sc.nextInt();
 			int width = sc.nextInt();
-			int[][] windows = new int[height][width];
 			for(int i=0;i<height;i++) {
 				for(int y=0;y<width;y++) {
 					int blackOrWhite = sc.nextInt();

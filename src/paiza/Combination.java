@@ -15,7 +15,7 @@ public class Combination {
 		super();
 		this.elements = elements;
 		this.test =  test;
-		this.border = border;
+		Combination.border = border;
 	}
 
 	public void print(int r) {

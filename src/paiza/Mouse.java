@@ -9,11 +9,11 @@ public class Mouse {
 	public static Boolean poorOrRich;
 
 	Mouse(String direction,int mouseHeight,int mouseWidth,String[][] townMap,Boolean poorOrRich){
-		this.direction = direction;
-		this.mouseHeight = mouseHeight;
-		this.mouseWidth = mouseWidth;
-		this.townMap = townMap;
-		this.poorOrRich = poorOrRich;
+		Mouse.direction = direction;
+		Mouse.mouseHeight = mouseHeight;
+		Mouse.mouseWidth = mouseWidth;
+		Mouse.townMap = townMap;
+		Mouse.poorOrRich = poorOrRich;
 	}
 
 	public static void main(String[] args) {
@@ -38,6 +38,7 @@ public class Mouse {
 			}else {
 				poorOrRich = true;
 			}
+			@SuppressWarnings("unused")
 			Mouse main = new Mouse(direction, mouseHeight, mouseWidth, townMap, poorOrRich);
 			try {
 				changePoorAndRich();

@@ -11,12 +11,13 @@ public class FortuneName {
 	public static int[] secondAnser;
 
 	public FortuneName(Map<String,Integer> changeWords) {
-		this.changeWords = changeWords;
-		this.firstAnser = new int[1];
-		this.secondAnser = new int[1];
+		FortuneName.changeWords = changeWords;
+		FortuneName.firstAnser = new int[1];
+		FortuneName.secondAnser = new int[1];
 	}
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		String firstPerson = sc.next();
 		String secondPerson = sc.next();
@@ -25,6 +26,7 @@ public class FortuneName {
 		for(int i=1;i<27;i++) {
 			changeWords.put(english[i-1],i);
 		}
+		@SuppressWarnings("unused")
 		FortuneName main = new FortuneName(changeWords);
 		firstAnser = joinName(firstPerson,secondPerson);
 		secondAnser = joinName(secondPerson, firstPerson);
