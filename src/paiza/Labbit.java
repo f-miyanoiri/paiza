@@ -5,7 +5,7 @@ public class Labbit {
 	public static int[] bushes;
 
 	Labbit(int[] bushes){
-		this.bushes = bushes;
+		Labbit.bushes = bushes;
 	}
 
 	public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class Labbit {
 			for(int i=0;i<labbit;i++) {
 				bushes[sc.nextInt()-1] = i+1;
 			}
+			@SuppressWarnings("unused")
 			Labbit main = new Labbit(bushes);
 			for(int i=0;i<junp;i++) {
 				for(int y=0;y<labbit;y++) {

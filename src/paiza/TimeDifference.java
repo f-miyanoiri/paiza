@@ -12,12 +12,15 @@ public class TimeDifference {
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			int country = sc.nextInt();
+			@SuppressWarnings("unused")
 			Map<String, Integer> countryMap = new HashMap<>();
 			int[] timeDifference = new int[country];
 			for(int i=0;i<country;i++) {
+				@SuppressWarnings("unused")
 				String countryName = sc.next();
-				timeDifference[i]= sc.nextInt(); 
+				timeDifference[i]= sc.nextInt();
 			}
+			@SuppressWarnings("unused")
 			String localCountryName = sc.next();
 			String localTime = sc.next();
 			Calendar  localCountryTime = stringChangeDate(localTime);
@@ -41,7 +44,8 @@ public class TimeDifference {
             return localCountryTime;
     }
 
-    public static void calcTimeDifference(Calendar localCountryTime,int timeDifference) {
+    @SuppressWarnings("static-access")
+	public static void calcTimeDifference(Calendar localCountryTime,int timeDifference) {
     	localCountryTime.add(localCountryTime.HOUR, timeDifference);
     	Date  calcTimeDifference = localCountryTime.getTime();
     	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
